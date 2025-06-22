@@ -3,9 +3,8 @@
 - 네트워크 구간별 속도를 측정하는 프로그램
 - TCP 패킷에서 TTL을 1부터 22까지 늘려가며 구간별 속도측정
 - 목적지 IP에 도착하면 중단
-
 - 결과 샘플
-```
+```bash
 INFO:__main__:Traceroute started!! {SOURCE_IP} -> 23.35.220.251:80
 INFO:__main__:TTL: 1, Average Elapsed Time: 0.0072 seconds, Successful Attempts: 3/3, Hop IP Addresses: ['192.168.219.1', '192.168.219.1', '192.168.219.1']
 ERROR:__main__:TTL: 2, No response
@@ -26,16 +25,18 @@ INFO:__main__:Reached destination!!
 ## Getting Started
 
 - 소스코드 다운로드
-```
-git clone {url} 
+```bash
+git clone https://github.com/tae0y/network-hop-tracing.git
+cd network-hop-tracing
 ```
 
 - 파이썬 환경설정
-```
-uv init
+```bash
+uv sync
 ```
 
 - 코드 실행
-```
+```bash
+# scapy 패키지에서 root 권한 필요
 sudo uv run main.py
 ```
